@@ -22,7 +22,4 @@ This project is licensed under the Apache 2.0 License - see the [License](https:
 
 ## Acknowledgments
 
-* I bow down to [Andrew Ng](https://www.andrewng.org/) who is the course instructor of 
-[Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning?) course on Coursera. The course helped
-me in building my concepts of Deep Learning.
-
+* 
