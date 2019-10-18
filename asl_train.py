@@ -71,10 +71,12 @@ with tf.name_scope('optimize'):
     train_op = tf.train.AdamOptimizer(lr).minimize(loss)
 
 with tf.name_scope('summaries'):
-    tf.summary.scalar("loss", tf.squeeze(loss))
+    tf.summary.scalar("loss", loss)
+    tf.summary.scalar("accuracy", accuracy)
     merged = tf.summary.merge_all()
 
-train_writer = tf.summary.FileWriter('/tmp/asl-train', tf.get_default_graph())
+### You will find the tensorflow graph at location '/tmp/asl-train'
+train_writer = tf.summary.FileWriter('asl-train', tf.get_default_graph())
 
 
 #tf.reset_default_graph()
@@ -95,7 +97,7 @@ with tf.Session() as sess:
         losses.append(epoch_loss)
         accuracies.append(epoch_accuracy)
         print(f"Epoch : {epoch+1}")
-        print(f"Accuracy : {epoch_accuracy}\tLoss : {epoch_loss}")
+        print(f"Accuracy : {round(epoch_accuracy,4)}\tLoss : {round(epoch_loss,4)}")
         print()
         train_writer.add_summary(summary, epoch)
         
