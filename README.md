@@ -27,7 +27,7 @@ We will be using Python and Tensorflow to build model to classify signs ASL. The
 
 ## Authors
 
-* **Mrityunjay Tripathi** - [*LinkedIn Profile*](https://www.linkedin.com/in/mrityunjay-tripathi-89a243168/)
+* **Mrityunjay Tripathi**
 
 ## License
 
